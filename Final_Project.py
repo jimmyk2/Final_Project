@@ -28,7 +28,7 @@ st.title("Math 10 Final Project")
 
 
 
-df = pd.read_csv("draftkings_contest_history_(11-23-21).csv", na_values=" ", )
+df = pd.read_csv("/Users/jimmy/Downloads/draftkings_contest_history_(11-23-21).csv", na_values=" ", )
 df["Date"]= df["Contest_Date_EST"].map(lambda x:x[:-5])
 df["Date"]= pd.to_datetime(df["Date"])
 df['Year']=df['Date'].dt.year
@@ -203,7 +203,8 @@ fig
 
 
 
-st.write('I have implemented new types of charts throughout the project with the plotly library. Thank you for your time. The link for my Github repository is below')
+st.write('I have implemented new types of charts throughout the project with the plotly library. Thank you for your time.' 
+         'The links for my Github repository and source sites for my plotly charts and linear regression line are below')
 st.write('https://github.com/jimmyk2/Final_Project',unsafe_allow_html=True)
-
-
+st.write('https://plotly.com/python/plotly-express/',unsafe_allow_html=True)
+st.write('https://plotly.com/python/pie-charts/',unsafe_allow_html=True)
