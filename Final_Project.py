@@ -28,7 +28,7 @@ st.title("Math 10 Final Project")
 
 
 
-df = pd.read_csv("/Users/jimmy/Downloads/draftkings_contest_history_(11-23-21).csv", na_values=" ", )
+df = pd.read_csv("draftkings_contest_history_(11-23-21).csv", na_values=" ", )
 df["Date"]= df["Contest_Date_EST"].map(lambda x:x[:-5])
 df["Date"]= pd.to_datetime(df["Date"])
 df['Year']=df['Date'].dt.year
